@@ -1,5 +1,15 @@
+# select the hash who's key is the value of season
+
 def get_first_name_of_season_winner(data, season)
-  # code here
+  data.each do |series, attributes|
+    if series.to_s == season
+      attributes.each do |key, value|
+        if key[:status] == "Winner"
+          return key[:name]
+        end
+      end
+    end
+  end
 end
 
 def get_contestant_name(data, occupation)
