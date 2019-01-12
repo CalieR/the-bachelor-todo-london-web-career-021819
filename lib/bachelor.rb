@@ -23,7 +23,14 @@ def get_contestant_name(data, occupation)
 end
 
 def count_contestants_by_hometown(data, hometown)
-  # code here
+  counter = 0
+  data.each do |series, attributes|
+    attributes.each do |key, value|
+      if key["hometown"] == hometown
+        counter ++
+      end
+    end
+  end
 end
 
 def get_occupation(data, hometown)
