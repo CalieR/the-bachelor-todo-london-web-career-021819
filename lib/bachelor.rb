@@ -36,7 +36,7 @@ end
 
 def get_occupation(data, hometown)
   occupation = []
-  date.each do |series, attributes|
+  data.each do |series, attributes|
     attributes.each do |key, value|
       if key["hometown"] == hometown
         occupation.push key["occupation"]
