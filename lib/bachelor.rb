@@ -47,11 +47,11 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  ages = []
+  ages = 0
   data.each do |series, attributes|
     if series == season # identify correct season
       attributes.each do |key, value|
-        ages.push key["age"].to_i
+        ages = ages + key["age"].to_i
       end
     end
   end
