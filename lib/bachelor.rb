@@ -52,7 +52,7 @@ def get_average_age_for_season(data, season)
   data.each do |series, attributes|
     if series == season # identify correct season
       attributes.each do |key, value|
-        ages = ages + key["age"].to_f
+        ages = ages + key["age"].to_f # need the average to be actual so can round up or down accordingly.  to_i won't allow this as res will be a whole number 
         persons = persons + 1
       end
     end
