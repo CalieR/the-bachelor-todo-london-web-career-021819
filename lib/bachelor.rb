@@ -35,7 +35,7 @@ def count_contestants_by_hometown(data, hometown)
 end
 
 def get_occupation(data, hometown)
-  occupation = []
+  occupation = [] # will hold the values of the occupation key for people whose location matches hometown
   data.each do |series, attributes|
     attributes.each do |key, value|
       if key["hometown"] == hometown
@@ -47,9 +47,12 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
+  ages = []
   data.each do |series, attributes|
-    if series == season
+    if series == season # identify correct season
+      attributes.each do |key, value|
 
+      end
     end
   end
 end
