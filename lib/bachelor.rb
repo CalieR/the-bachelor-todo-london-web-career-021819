@@ -27,7 +27,7 @@ def count_contestants_by_hometown(data, hometown)
   data.each do |series, attributes|
     attributes.each do |key, value|
       if key["hometown"] == hometown
-        counter ++
+        counter = counter + 1
       end
     end
   end
